@@ -1,10 +1,10 @@
 # solidus-sample
 
-This is a simple Ruby app using the [Rails](http://rubyonrails.org) framework and solidus gem with addtional rebate module on top. 
+This is a simple Ruby app using the [Rails](http://rubyonrails.org) framework and [Solidus](https://github.com/solidusio/solidus) gem with addtional rebate module on top. 
 
 ## Running Locally
 
-Make sure you have [Ruby](https://www.ruby-lang.org), [Bundler](http://bundler.io) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
+Make sure you have [Ruby](https://www.ruby-lang.org), [Bundler](http://bundler.io) installed.
 
 ```sh
 git clone git@github.com/khanrazee/solidus-sample.git
