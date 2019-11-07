@@ -1,0 +1,18 @@
+en:
+  spree:
+    admin:
+      tab:
+        rebates: "Rebates"
+    new_rebate: "New Rebate"
+    listing_rebates: "Listing Rebates"
+    editing_rebate: "Editing Rebate"
+    back_to_rebates_list: "Back to Rebates list"
+  activerecord:
+    attributes:
+      spree/rebate:
+        url: Url
+        title: Title
+        total_available: Total Available
+        start_at: Start At
+        end_at: End At
+        brand_name: Brand Name

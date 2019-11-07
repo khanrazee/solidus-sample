@@ -1,0 +1,43 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:listing_rebates) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to Spree.t(:new_rebate), new_object_url, icon: 'plus', id: 'admin_new_rebate_link' %>
+  </li>
+<% end %>
+
+<table class="index" id="listing_rebates" data-hook>
+  <colgroup>
+    <col style="width: 85%">
+    <col style="width: 15%">
+  </colgroup>
+  <thead>
+    <tr data-hook="admin_rebates_index_headers">
+      <th><%= t(:title, scope: 'activerecord.attributes.spree/rebate') %></th>
+      <th><%= t(:brand_name, scope: 'activerecord.attributes.spree/rebate') %></th>
+      <th><%= t(:start_at, scope: 'activerecord.attributes.spree/rebate') %></th>
+      <th><%= t(:end_at, scope: 'activerecord.attributes.spree/rebate') %></th>
+      <th><%= t(:url, scope: 'activerecord.attributes.spree/rebate') %></th>
+      <th data-hook="admin_rebates_index_header_actions" class="actions"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rebates.each do |rebate| %>
+      <tr id="<%= spree_dom_id rebate %>" data-hook="admin_rebates_index_rows" class="<%= cycle('odd', 'even')%>">
+        <td><%= rebate.title%></td>
+        <td><%= rebate.brand_name%></td>
+        <td><%= rebate.start_at%></td>
+        <td><%= rebate.end_at%></td>
+        <td><%= link_to rebate.url,rebate.url, target: '_blank' %></td>
+        <td data-hook="admin_rebates_index_row_actions" class="actions">
+          <%= link_to_edit rebate, no_text: true %>
+          <%= link_to_delete rebate, no_text: true %>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @rebates %>

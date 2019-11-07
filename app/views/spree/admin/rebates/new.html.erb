@@ -1,0 +1,23 @@
+<% content_for :page_title do %>
+  <%= Spree.t(:new_rebate) %>
+<% end %>
+
+<% content_for :page_actions do %>
+  <li>
+    <%= button_link_to Spree.t(:back_to_rebates_list), collection_url, icon: 'arrow-left' %>
+  </li>
+<% end %>
+
+<div data-hook="admin_rebate_new_form_header">
+  <%= render 'spree/shared/error_messages', target: @rebate %>
+</div>
+
+<div data-hook="admin_rebate_new_form">
+  <%= form_for [:admin, @rebate] do |f| %>
+    <%= render 'form', f: f %>
+
+    <div data-hook="admin_rebate_new_form_buttons">
+      <%= render 'spree/admin/shared/new_resource_links' %>
+    </div>
+  <% end %>
+</div>
