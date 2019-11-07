@@ -1,24 +1,35 @@
-# README
+# solidus-sample
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a simple Ruby app using the [Rails](http://rubyonrails.org) framework and solidus gem with addtional rebate module on top. 
 
-Things you may want to cover:
+## Running Locally
 
-* Ruby version
+Make sure you have [Ruby](https://www.ruby-lang.org), [Bundler](http://bundler.io) and the [Heroku Toolbelt](https://toolbelt.heroku.com/) installed.
 
-* System dependencies
+```sh
+git clone git@github.com/khanrazee/solidus-sample.git
+cd solidus-sample
+bundle
+rake db:create
+rake db:migrate
+rake db:seed
+rails s
 
-* Configuration
+```
 
-* Database creation
+Your app should now be running on [localhost:3000](http://localhost:3000/).
 
-* Database initialization
+## Accessing Admin
 
-* How to run the test suite
+```
+go to localhost:3000
+Enter credential admin@example.com / test123
 
-* Services (job queues, cache servers, search engines, etc.)
+```
 
-* Deployment instructions
+## Documentation
 
-* ...
+For more information about using Rails or Solidus, see these Dev Center articles:
+
+- [Rails Support](https://guides.rubyonrails.org/)
+- [Solidus Support](https://docs.solidus.io/)
